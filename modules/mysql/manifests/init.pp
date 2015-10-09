@@ -22,7 +22,6 @@ class mysql::password() {
 
 	exec { 'set mysql root password':
     		path => "/usr/bin",
-    		unless => "mysql -uroot -p test",
     		command => "mysqladmin -u root password test",
 	}
 }
