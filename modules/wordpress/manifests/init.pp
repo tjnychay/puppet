@@ -35,3 +35,12 @@ class wordpress::config() {
 		source  => "/etc/puppet/modules/wordpress/files/wp-config.php",
 	}
 }
+
+class wordpress::restart() {
+	require mysql::password
+	require wordpress::config
+	
+	exec { 'restart httpd':
+		command => "/sbin/service httpd restart",
+	}
+}
