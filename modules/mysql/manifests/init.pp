@@ -16,3 +16,13 @@ class mysql::database() {
                 command => "/usr/bin/mysqladmin -uroot create blog",
         }
 }
+
+class mysql::password() {
+	require mysql::database
+
+	exec { 'set mysql root password':
+    		path => "/usr/bin",
+    		unless => "mysql -uroot -p test",
+    		command => "mysqladmin -u root password test",
+	}
+}
