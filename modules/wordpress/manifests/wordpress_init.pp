@@ -26,3 +26,12 @@ class wordpress::move() {
 		command => "/bin/mv wordpress blog",
 	}
 }
+
+class wordpress::config() {
+	require wordpress::move
+	
+	file { "/var/www/html/blog/wp-config.php":
+		ensure  => present,
+		source  => "/etc/puppet/modules/wordpress/files/wp-config.php",
+	}
+}
