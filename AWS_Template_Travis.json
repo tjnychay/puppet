@@ -16,7 +16,10 @@
     "AdminPassword" : {
       "Description" : "Administrative Password Required for Login",
       "Type" : "String",
-      "ConstraintDescription" : "Must be a valid Administrative Password."
+      "MinLength" : "1",
+      "MaxLength" : "25",
+      "AllowedPattern" : "[a-zA-Z0-9]*"
+      "ConstraintDescription" : "Must be a valid Administrative Password (1-25 Characters)."
     },
 
     "KeyName": {
