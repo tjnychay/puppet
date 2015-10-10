@@ -79,6 +79,9 @@ $table_prefix  = 'wp_';
  */
 define('WP_DEBUG', false);
 
+/* Custom WordPress URL. */
+define( 'WP_SITEURL',     'localhost/blog' );
+
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
