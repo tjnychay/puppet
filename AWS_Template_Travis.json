@@ -16,7 +16,6 @@
     "AdminPassword" : {
       "Description" : "Administrative Password Required for Login",
       "Type" : "String",
-      "Default" : "",
       "AllowedValues" : [ "test", "trial", "training"],
       "ConstraintDescription" : "Must be a valid Administrative Password."
     },
