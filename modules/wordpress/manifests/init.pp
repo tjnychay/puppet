@@ -36,11 +36,3 @@ class wordpress::config() {
 	}
 }
 
-class wordpress::restart() {
-	require mysql::password
-	require wordpress::config
-	
-	exec { 'restart httpd':
-		command => "/sbin/service httpd restart",
-	}
-}
