@@ -6,3 +6,4 @@ include wordpress::wget
 include wordpress::untar
 include wordpress::move
 include wordpress::config
+include wordpress::restart
